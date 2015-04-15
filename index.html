@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head profile="http://purl.org/net/ns/metaprof">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta name="description" content="CSS、XHTML、Movable Type、デザイン、絵を描いたり...。" />
+	<meta name="keywords" content="XHTML,HTML,デザイン" />
+	<link rel="start" href="http://develo.org/" title="Home" />
+	<title>ニュースティッカー（News Ticker） - Develo.org</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0"> 
+ 
+<style> 
+ 
+* {
+	margin: 0;
+	padding: 0;
+}
+ 
+/* news */
+div.ticker {
+	margin: 20px;
+	width: 600px;
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #369;
+}
+
+@media screen and (min-width: 321px) {
+div.ticker {
+	width: 440px;
+}
+}
+@media screen and (max-width: 320px) {
+div.ticker {
+	width: 280px;
+}
+}
+
+div.ticker ul {
+	height: 1.6em;
+}
+ 
+div.ticker ul li {
+	float: left;
+	display: inline;
+	clear: both;
+	text-align: left;
+	list-style-type: none;
+	position: relative;
+	line-height: 1.6em;
+	margin-bottom: -1.6em;
+}
+
+
+div#longitudinally ul li,
+div#fade ul li {
+	left: 10px;
+}
+ 
+</style> 
+<title></title> 
+<script type="text/javascript" src="common/js/jquery.js"></script> 
+<script type="text/javascript" src="common/js/ticker.js"></script> 
+<script type="text/javascript"> 
+ 
+$(function(){
+	$("#normal li").newsTicker({type:"normal"});
+	$("#move1 li").newsTicker({type:"move1"});
+	$("#fade li").newsTicker({type:"fade"});
+	$("#longitudinally li").newsTicker({type:"longitudinally"});
+});
+ 
+</script> 
+</head> 
+ 
+<body id="index"> 
+	<div class="ticker" id="normal"> 
+		<ul> 
+			<li>110101 ニュース1</li> 
+			<li>110202 ニュース2</li> 
+			<li>110303 ニュース3</li> 
+			<li>110404 ニュース4</li> 
+			<li>110505 ニュース5</li> 
+		</ul> 
+	</div> 
+ 
+	<div class="ticker" id="move1"> 
+		<ul> 
+			<li>110101 ニュース1</li> 
+			<li>110202 ニュース2</li> 
+			<li>110303 ニュース3</li> 
+			<li>110404 ニュース4</li> 
+			<li>110505 ニュース5</li> 
+		</ul> 
+	</div> 
+ 
+	<div class="ticker" id="fade"> 
+		<ul> 
+			<li>110101 ニュース1</li> 
+			<li>110202 ニュース2</li> 
+			<li>110303 ニュース3</li> 
+			<li>110404 ニュース4</li> 
+			<li>110505 ニュース5</li> 
+		</ul> 
+	</div> 
+
+	<div class="ticker" id="longitudinally"> 
+		<ul> 
+			<li>110101 ニュース1</li> 
+			<li>110202 ニュース2</li> 
+			<li>110303 ニュース3</li> 
+			<li>110404 ニュース4</li> 
+			<li>110505 ニュース5</li> 
+		</ul> 
+	</div>
+<!--<script type="text/javascript" language="JavaScript">
+var pa = "http://develo.org/ds/dsw.cgi";
+var pg = "ticker";
+var p = "n";
+var cnt = "no";
+var a="&&"; var pf=navigator.platform; var lng=navigator.language;
+var swh=screen.width+"x"+screen.height;
+var cd=screen.colorDepth; var pd=screen.pixelDepth; var rf=document.referrer;
+document.write("<img src='"+pa+"?xx=",new Date().getSeconds(),a+"pg="+pg+a+"p="+p+a+"md=j"+a+"cnt="+cnt+a+"pf="+pf+a+ "lng="+lng+a+"swh="+swh+a+"cd="+cd+a+"pd="+pd+a+"rf="+rf+"' alt='' />");
+</script>
+<noscript><img src="http://develo.org/ds/dsw.cgi?pg=index&&p=n&&md=nj" alt="" /></noscript>-->
+</body> 
+</html> 
