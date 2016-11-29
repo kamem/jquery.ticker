@@ -113,7 +113,7 @@ $(function(){
 		//初期設定
 		this.each(function(i){
 			//idをつける
-			$(this).attr("class",tagId+i);
+			$(this).addClass(tagId+i);
 			
 			if(c.type == "fade") {
 				//最初以外は消す
